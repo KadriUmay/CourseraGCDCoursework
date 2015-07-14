@@ -9,7 +9,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 The RunAnalysis.R script performs the following steps to clean the data:
 
-1. Read X_train.txt, y_train.txt and subject_train.txt from the "./data/train" folder and store them in trainData, trainLabel and trainSubject variables respectively.
+1.Read X_train.txt, y_train.txt and subject_train.txt from the "./data/train" folder and store them in trainData, trainLabel and trainSubject variables respectively.
 
 2.Read X_test.txt, y_test.txt and subject_test.txt from the "./data/test" folder and store them in testData, testLabel and testsubject variables respectively.
 
@@ -27,8 +27,9 @@ The RunAnalysis.R script performs the following steps to clean the data:
 
 9.Join the joinSubject, joinLabel and joinData by column to get a new cleaned 10299x68 data frame, cleanedData. Name the first two columns, "subject" and "activity". The "subject" column contains integers that range from 1 to 30 inclusive; the "activity" column contains 6 kinds of activities; the last 66 columns contain measurements that range from -1 to 1 exclusive.
 
-x.Write the cleanedData out to "merged_data.txt" file in current working directory.
+10.Write the cleanedData out to "tidydata.txt" file in current working directory.
 
-xi.Finally, generate a second independent tidy data set with the average of each measurement for each activity and each subject. We have 30 unique subjects and 6 unique activities, which result in a 180 combinations of the two. Then, for each combination, we calculate the mean of each measurement with the corresponding combination. So, after initializing the result data frame and performing the two for-loops, we get a 180x68 data frame.
-xii.Write the result out to "data_with_means.txt" file in current working directory. 
+11.Generate a second tidy data set with the average of each measurement for each activity and each subject. Then, for each combination, calculate the mean of each measurement. 
+
+12.Write the result out to "tidydatameans.txt" file in current working directory. 
 
